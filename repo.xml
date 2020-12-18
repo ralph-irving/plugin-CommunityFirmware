@@ -1,0 +1,15 @@
+<extensions>
+  <details>
+    <title lang="EN">CommunityFirmware</title>
+  </details>
+  <plugins>
+    <plugin maxTarget="*" minTarget="8.0.1" name="CommunityFirmware" version="0.0.2">
+      <title lang="EN">Community Firmware</title>
+      <desc lang="EN">Community Firmware for SB Touch/Radio/Controller</desc>
+      <creator>Michael Herger</creator>
+      <email>ralph_irving@hotmail.com</email>
+      <url>https://github.com/ralph-irving/plugin-CommunityFirmware/releases/download/0.0.2/plugin-CommunityFirmware-0.0.2.zip</url>
+      <sha>27a415a971600606c6ab24ae82bdef092b1724af</sha>
+    </plugin>
+  </plugins>
+</extensions>

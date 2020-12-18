@@ -1,0 +1,5 @@
+PLUGIN_COMMUNITY_FIRMWARE
+	EN	Community Firmware for Touch/Radio/Controller
+
+PLUGIN_COMMUNITY_FIRMWARE_DESC
+	EN	Community Firmware for SqueezeBox Touch/Radio/Controller. This firmware <a href="https://ralph_irving.gitlab.io/lms-community-firmware/changelog.html" target="_blank">fixes several issues and removes obsolete features</a>. Use at your own risk!
