@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <extensions>
   <details>
     <title lang="EN">CommunityFirmware</title>
@@ -9,7 +10,7 @@
       <creator>Michael Herger</creator>
       <email>ralph_irving@hotmail.com</email>
       <url>https://github.com/ralph-irving/plugin-CommunityFirmware/releases/download/0.0.2/plugin-CommunityFirmware-0.0.2.zip</url>
-      <sha>27a415a971600606c6ab24ae82bdef092b1724af</sha>
+      <sha>24a0f06b55f480c93e4708f7b5ccf9806ca6840e</sha>
     </plugin>
   </plugins>
 </extensions>
