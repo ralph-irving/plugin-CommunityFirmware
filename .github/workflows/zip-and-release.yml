@@ -25,6 +25,7 @@ jobs:
           xmlstarlet ed --inplace --update "//extensions/plugins/plugin/sha" --value "$SHA1SUM" repo.xml
           xmlstarlet ed --inplace --update "//extensions/plugins/plugin/url" --value "$ZIP_URL" repo.xml
           xmlstarlet ed --inplace --update "//extensions/plugins/plugin/@version" --value "${{ github.event.inputs.version }}" repo.xml
+          xmlstarlet ed --inplace --update "//extensions/plugins/plugin/@version" --value "${{ github.event.inputs.version }}" install.xml
                     
       - name: Commit changes
         run: |
