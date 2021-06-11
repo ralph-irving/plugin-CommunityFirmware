@@ -37,7 +37,9 @@ use constant COMMUNITY_FIRMWARE_REPOSITORY => 'https://ralph_irving.gitlab.io/lm
 my $log = logger('player.firmware');
 
 sub BASE {
-	my $url = $prefs->get('enable')
+	my $hint = shift;
+
+	my $url = ($prefs->get('enable') && (!$hint || $hint =~ /jive|fab4|baby/))
 		? COMMUNITY_FIRMWARE_REPOSITORY
 		: $DEFAULT_REPOSITORY;
 
