@@ -4,11 +4,14 @@ use strict;
 
 use base qw(Slim::Plugin::Base);
 
-use Slim::Networking::Repositories;
 use Slim::Utils::Firmware;
 use Slim::Utils::Prefs;
 
 my $DEFAULT_REPOSITORY;
+
+BEGIN {
+	$DEFAULT_REPOSITORY = Slim::Utils::Firmware::BASE();
+}
 
 my $prefs = preferences('plugin.communityfirmware');
 
@@ -17,8 +20,6 @@ sub initPlugin {
 		require Plugins::CommunityFirmware::Settings;
 		Plugins::CommunityFirmware::Settings->new();
 	}
-
-	$DEFAULT_REPOSITORY ||= Slim::Networking::Repositories->getUrlForRepository('firmware');
 
 	preferences('server')->set('checkVersion', 1);
 }
