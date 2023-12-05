@@ -6,6 +6,8 @@ on:
         description: 'version'
         required: true
 
+permissions: write-all
+
 jobs:
   build:
     name: Zip and release
