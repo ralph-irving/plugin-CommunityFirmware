@@ -37,6 +37,10 @@ use constant COMMUNITY_FIRMWARE_REPOSITORY => 'https://ralph_irving.gitlab.io/lm
 
 my $log = logger('player.firmware');
 
+sub CHECK_INTERVAL { 
+	return Slim::Utils::Prefs::preferences('server')->get('checkVersionInterval');
+}
+
 sub BASE {
 	my $hint = shift;
 
