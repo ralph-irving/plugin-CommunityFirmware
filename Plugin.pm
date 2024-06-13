@@ -21,6 +21,17 @@ sub initPlugin {
 		Plugins::CommunityFirmware::Settings->new();
 	}
 
+	$prefs->setChange(sub {
+		my %seen;
+
+		for my $client ( Slim::Player::Client::clients() ) {
+			next if $seen{$client->id}++;
+			warn $client->model;
+			Slim::Utils::Firmware::init_firmware_download($client->model);
+		}
+
+	}, 'enable');
+
 	preferences('server')->set('checkVersion', 1);
 }
 
@@ -37,7 +48,7 @@ use constant COMMUNITY_FIRMWARE_REPOSITORY => 'https://ralph_irving.gitlab.io/lm
 
 my $log = logger('player.firmware');
 
-sub CHECK_INTERVAL { 
+sub CHECK_INTERVAL {
 	return Slim::Utils::Prefs::preferences('server')->get('checkVersionInterval');
 }
 
