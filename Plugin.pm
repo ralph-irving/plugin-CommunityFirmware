@@ -26,7 +26,6 @@ sub initPlugin {
 
 		for my $client ( Slim::Player::Client::clients() ) {
 			next if $seen{$client->id}++;
-			warn $client->model;
 			Slim::Utils::Firmware::init_firmware_download($client->model);
 		}
 
