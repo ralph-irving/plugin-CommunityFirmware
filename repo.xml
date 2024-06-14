@@ -4,7 +4,7 @@
     <title lang="EN">Community Jive Firmware</title>
   </details>
   <plugins>
-    <plugin maxTarget="*" minTarget="8.0.1" name="CommunityFirmware" version="0.0.8">
+    <plugin maxTarget="*" minTarget="8.4" name="CommunityFirmware" version="0.0.8">
       <title lang="EN">Community Firmware</title>
       <desc lang="EN">Community Firmware for SqueezeBox Touch/Radio/Controller</desc>
       <creator>Michael Herger, Ralph Irving</creator>

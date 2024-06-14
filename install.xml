@@ -10,7 +10,7 @@
   <optionsURL>plugins/CommunityFirmware/settings.html</optionsURL>
   <type>2</type>
   <targetApplication>
-    <minVersion>8.0.1</minVersion>
+    <minVersion>8.4</minVersion>
     <maxVersion>*</maxVersion>
     <id>SlimServer</id>
   </targetApplication>
