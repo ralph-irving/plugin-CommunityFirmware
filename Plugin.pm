@@ -6,6 +6,8 @@ use base qw(Slim::Plugin::Base);
 
 use Slim::Utils::Firmware;
 use Slim::Utils::Prefs;
+use Slim::Utils::Log;
+use Plugins::CommunityFirmware::DefaultTimezoneRequest;
 
 my $DEFAULT_REPOSITORY;
 
@@ -14,6 +16,12 @@ BEGIN {
 }
 
 my $prefs = preferences('plugin.communityfirmware');
+
+my $log = Slim::Utils::Log->addLogCategory({
+	'category'     => 'plugin.communityfirmware',
+	'defaultLevel' => 'WARN',
+	'description'  => 'PLUGIN_COMMUNITY_FIRMWARE',
+});
 
 sub initPlugin {
 	if (main::WEBUI) {
@@ -32,6 +40,10 @@ sub initPlugin {
 	}, 'enable');
 
 	preferences('server')->set('checkVersion', 1);
+
+	# Sets up a S::C::Request scheme to handle SqueezeOS's need for a
+	# default TimeZone on initial setup or factory reset.
+	Plugins::CommunityFirmware::DefaultTimezoneRequest::init();
 }
 
 1;
