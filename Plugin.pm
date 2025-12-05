@@ -3,6 +3,7 @@ package Plugins::CommunityFirmware::Plugin;
 use strict;
 
 use base qw(Slim::Plugin::Base);
+use File::Spec::Functions qw(catfile);
 
 use Slim::Utils::Firmware;
 use Slim::Utils::Prefs;
@@ -24,9 +25,19 @@ sub initPlugin {
 	$prefs->setChange(sub {
 		my %seen;
 
+		my $updatesDir = Slim::Utils::OSDetect::dirsFor('updates');
+
 		for my $client ( Slim::Player::Client::clients() ) {
 			next if $seen{$client->id}++;
-			Slim::Utils::Firmware::init_firmware_download($client->model);
+			my $model = $client->model;
+
+			if ( $prefs->get('enable') ) {
+				Slim::Utils::Firmware::init_firmware_download($model);
+			}
+			else {
+				Slim::Utils::Misc::deleteFiles($updatesDir, qr/^${model}_\d+\.\d+\.\d+_.*\.bin(\.tmp)?$/i);
+				Slim::Utils::Misc::deleteFiles($updatesDir, qr/^$model\.version$/i);
+			}
 		}
 
 	}, 'enable');
