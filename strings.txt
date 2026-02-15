@@ -4,14 +4,16 @@ PLUGIN_COMMUNITY_FIRMWARE
 	
 PLUGIN_COMMUNITY_FIRMWARE_BETA
 	EN	BETA Channel
+	NL	BETA-kanaal
 	
 PLUGIN_COMMUNITY_FIRMWARE_DESC
 	EN	Community Firmware for SqueezeBox Touch/Radio/Controller.</br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware/changelog.html" target="_blank">Release Changelog</a>.
-	NL	Community Firmware voor SqueezeBox Touch/Radio/Controller.</br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware/changelog.html" target="_blank">lost verschillende problemen op en verwijdert verouderde functies</a>.
+	NL	Community Firmware voor SqueezeBox Touch/Radio/Controller.</br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware/changelog.html" target="_blank">Wijzigingslogboek release</a>.
 
 PLUGIN_COMMUNITY_FIRMWARE_DESC_BETA
 	EN	Install BETA Release Firmware when available.</br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware-beta/changelog.html" target="_blank">BETA Release Changelog.</a>
+	NL	Installeer de BETA-firmware zodra deze beschikbaar is.</br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware-beta/changelog.html" target="_blank">Wijzigingslogboek BETA-release.</a>
 
 PLUGIN_COMMUNITY_FIRMWARE_RISK_NOTICE
 	EN	This firmware is distributed in the hope that it will be useful, but<br />WITHOUT ANY WARRANTY; without even the implied warranty of <br />MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.<br /><br />Use at your own risk&#33;<br />
-	NL	Gebruik op eigen risico!
+	NL	Deze firmware wordt verspreid in de hoop dat deze nuttig zal zijn, maar<br />ZONDER ENIGE GARANTIE; zelfs zonder de impliciete garantie van<br />VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.<br /><br />Gebruik op eigen risico&#33;<br />
