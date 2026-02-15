@@ -16,7 +16,9 @@ sub page {
 }
 
 sub prefs {
-	return ( $prefs, qw(enable) );
+        my @prefs = ($prefs, qw(enable beta));
+
+        return @prefs;
 }
 
 1;

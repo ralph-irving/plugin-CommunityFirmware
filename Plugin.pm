@@ -54,8 +54,6 @@ use strict;
 
 use Slim::Utils::Log;
 
-use constant COMMUNITY_FIRMWARE_REPOSITORY => 'https://ralph_irving.gitlab.io/lms-community-firmware/update/firmware/';
-
 my $log = logger('player.firmware');
 
 sub CHECK_INTERVAL {
@@ -65,8 +63,12 @@ sub CHECK_INTERVAL {
 sub BASE {
 	my $hint = shift;
 
+	my $COMMUNITY_FIRMWARE_REPOSITORY = ($prefs->get('beta') && (!$hint || $hint =~ /jive|fab4|baby/))
+		? 'https://ralph_irving.gitlab.io/lms-community-firmware-beta/update/firmware/'
+		: 'https://ralph_irving.gitlab.io/lms-community-firmware/update/firmware/';
+
 	my $url = ($prefs->get('enable') && (!$hint || $hint =~ /jive|fab4|baby/))
-		? COMMUNITY_FIRMWARE_REPOSITORY
+		? $COMMUNITY_FIRMWARE_REPOSITORY
 		: $DEFAULT_REPOSITORY;
 
 	main::INFOLOG && $log->is_info && $log->info("Firmware check URL: $url");
