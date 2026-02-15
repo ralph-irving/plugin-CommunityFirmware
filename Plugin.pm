@@ -20,6 +20,7 @@ sub initPlugin {
 	if (main::WEBUI) {
 		require Plugins::CommunityFirmware::Settings;
 		Plugins::CommunityFirmware::Settings->new();
+		Plugins::CommunityFirmware::Settings->init();
 	}
 
 	$prefs->setChange(sub {
