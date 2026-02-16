@@ -3,10 +3,11 @@
   <id>ee44b1cc-fe02-41cb-8f49-ffb276569c4b</id>
   <module>Plugins::CommunityFirmware::Plugin</module>
   <name>PLUGIN_COMMUNITY_FIRMWARE</name>
-  <description>PLUGIN_COMMUNITY_FIRMWARE_DESC</description>
+  <description>PLUGIN_COMMUNITY_FIRMWARE_INFO</description>
   <creator>Michael Herger</creator>
   <version>0.1.0</version>
   <defaultState>enabled</defaultState>
+  <homepageURL>https://github.com/ralph-irving/squeezeos/commits/</homepageURL>
   <optionsURL>plugins/CommunityFirmware/settings.html</optionsURL>
   <type>2</type>
   <targetApplication>
