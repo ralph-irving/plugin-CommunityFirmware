@@ -7,6 +7,9 @@ use File::Spec::Functions qw(catfile);
 
 use Slim::Utils::Firmware;
 use Slim::Utils::Prefs;
+use Slim::Utils::Log;
+
+my $log = logger('player.firmware');
 
 my $DEFAULT_REPOSITORY;
 
@@ -38,6 +41,8 @@ sub initPlugin {
 			else {
 				Slim::Utils::Misc::deleteFiles($updatesDir, qr/^${model}_\d+\.\d+\.\d+_.*\.bin(\.tmp)?$/i);
 				Slim::Utils::Misc::deleteFiles($updatesDir, qr/^$model\.version$/i);
+
+				main::INFOLOG && $log->is_info && $log->info("Removing downloaded firmware from $updatesDir");
 			}
 		}
 

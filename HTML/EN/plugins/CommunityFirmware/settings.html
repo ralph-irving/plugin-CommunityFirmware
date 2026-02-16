@@ -5,13 +5,13 @@
 	[% END %]
 
 	[% WRAPPER setting title="PLUGIN_COMMUNITY_FIRMWARE" desc="" %]
-		<input type="checkbox" name="pref_enable" id="enable" [% IF prefs.pref_enable %]checked="checked" [% END %] value="1" class="stdedit" />
-		<label for="enable">[% "PLUGIN_COMMUNITY_FIRMWARE_DESC" | string %]</label>
+		<input type="checkbox" name="pref_enable" id="enable" [% IF prefs.pref_enable %] checked="checked" [% END %] value="1" class="stdedit" />
+		<label for="pref_enable">[% "PLUGIN_COMMUNITY_FIRMWARE_DESC" | string %]</label>
 	[% END %]
 
 	[% WRAPPER setting title="PLUGIN_COMMUNITY_FIRMWARE_BETA" desc="" %]
-		<input type="checkbox" name="pref_beta" id="beta" [% IF prefs.pref_beta %]checked="checked" [% END %] value="1" class="stdedit" />
-		<label for="beta">[% "PLUGIN_COMMUNITY_FIRMWARE_DESC_BETA" | string %]</label>
+		<input type="checkbox" name="pref_beta" id="beta" [% IF prefs.pref_beta %] checked="checked" [% END %] value="1" class="stdedit" />
+		<label for="pref_beta">[% "PLUGIN_COMMUNITY_FIRMWARE_DESC_BETA" | string %]</label>
 	[% END %]
 
 [% PROCESS settings/footer.html %]
