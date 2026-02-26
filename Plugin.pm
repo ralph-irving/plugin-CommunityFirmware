@@ -19,11 +19,15 @@ BEGIN {
 
 my $prefs = preferences('plugin.communityfirmware');
 
+$prefs->init({
+	enable => 1,
+	beta   => 0,
+});
+
 sub initPlugin {
 	if (main::WEBUI) {
 		require Plugins::CommunityFirmware::Settings;
 		Plugins::CommunityFirmware::Settings->new();
-		Plugins::CommunityFirmware::Settings->init();
 	}
 
 	$prefs->setChange(sub {
@@ -45,8 +49,13 @@ sub initPlugin {
 				main::INFOLOG && $log->is_info && $log->info("Removing downloaded firmware from $updatesDir");
 			}
 		}
-
 	}, 'enable');
+
+	# make sure the falsy value is never undefined, or it would get re-initialised with defaults
+	$prefs->setChange(sub {
+		my ($pref, $val) = @_;
+		$prefs->set($pref, $val || 0);
+	}, 'enable', 'beta');
 
 	preferences('server')->set('checkVersion', 1);
 }
@@ -58,9 +67,8 @@ package Slim::Utils::Firmware;
 
 use strict;
 
-use Slim::Utils::Log;
-
-my $log = logger('player.firmware');
+use constant COMMUNITY_FIRMWARE_REPOSITORY => 'https://ralph_irving.gitlab.io/lms-community-firmware/update/firmware/';
+use constant COMMUNITY_BETA_FIRMWARE_REPOSITORY => 'https://ralph_irving.gitlab.io/lms-community-firmware-beta/update/firmware/';
 
 sub CHECK_INTERVAL {
 	return Slim::Utils::Prefs::preferences('server')->get('checkVersionInterval');
@@ -69,12 +77,8 @@ sub CHECK_INTERVAL {
 sub BASE {
 	my $hint = shift;
 
-	my $COMMUNITY_FIRMWARE_REPOSITORY = ($prefs->get('beta') && (!$hint || $hint =~ /jive|fab4|baby/))
-		? 'https://ralph_irving.gitlab.io/lms-community-firmware-beta/update/firmware/'
-		: 'https://ralph_irving.gitlab.io/lms-community-firmware/update/firmware/';
-
 	my $url = ($prefs->get('enable') && (!$hint || $hint =~ /jive|fab4|baby/))
-		? $COMMUNITY_FIRMWARE_REPOSITORY
+		? ($prefs->get('beta') ? COMMUNITY_BETA_FIRMWARE_REPOSITORY : COMMUNITY_FIRMWARE_REPOSITORY)
 		: $DEFAULT_REPOSITORY;
 
 	main::INFOLOG && $log->is_info && $log->info("Firmware check URL: $url");
