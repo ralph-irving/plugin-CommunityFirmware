@@ -1,23 +1,35 @@
 PLUGIN_COMMUNITY_FIRMWARE
+	DE	Community-Firmware f&uuml;r Touch/Radio/Controller
 	EN	Community Firmware for Touch/Radio/Controller
+	FR	Micrologiciel communautaire pour écran tactile/radio/contrôleur
 	NL	Community Firmware voor Touch/Radio/Controller
-	
+
 PLUGIN_COMMUNITY_FIRMWARE_INFO
-	EN	Lyrion Community supported firmware for the Logitech jive based players. 
+	DE	Von der Lyrion-Community unterst&uuml;tzte Firmware f&uuml;r die Logitech Jive-basierten Player.
+	EN	Lyrion Community supported firmware for the Logitech jive based players.
+	FR	Lyrion Micrologiciel pris en charge par la communauté pour les lecteurs basés sur Logitech jive.
 	NL	De Lyrion Community ondersteunde firmware voor Logitech Jive-gebaseerde spelers.
-	
+
 PLUGIN_COMMUNITY_FIRMWARE_BETA
+	DE	BETA Kanal
 	EN	BETA Channel
+	FR	Chaîne BETA
 	NL	BETA-kanaal
-	
+
 PLUGIN_COMMUNITY_FIRMWARE_DESC
-	EN	Community Firmware for SqueezeBox Touch/Radio/Controller.</br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware/changelog.html" target="_blank">Release Changelog</a>.
-	NL	Community Firmware voor SqueezeBox Touch/Radio/Controller.</br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware/changelog.html" target="_blank">Wijzigingslogboek release</a>.
+	DE	Community-Firmware f&uuml;r Squeezebox Touch/Radio/Controller.</br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware/changelog.html" target="_blank">Release-Changelog</a>.
+	EN	Community Firmware for Squeezebox Touch/Radio/Controller.</br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware/changelog.html" target="_blank">Release Changelog</a>.
+	FR	Micrologiciel communautaire pour Squeezebox Touch/Radio/Controller.</br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware/changelog.html" target="_blank">Journal des modifications</a>.
+	NL	Community Firmware voor Squeezebox Touch/Radio/Controller.</br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware/changelog.html" target="_blank">Wijzigingslogboek release</a>.
 
 PLUGIN_COMMUNITY_FIRMWARE_DESC_BETA
+	DE	Installieren Sie die BETA-Release-Firmware, sobald sie verf&uuml;gbar ist. </br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware-beta/changelog.html" target="_blank">BETA-Release-&Auml;nderungsprotokoll. </a>
 	EN	Install BETA Release Firmware when available.</br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware-beta/changelog.html" target="_blank">BETA Release Changelog.</a>
+	FR	Installez le micrologiciel BETA dès qu'il est disponible. </br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware-beta/changelog.html" target="_blank">Journal des modifications de la version BETA. </a>
 	NL	Installeer de BETA-firmware zodra deze beschikbaar is.</br></br><a href="https://ralph_irving.gitlab.io/lms-community-firmware-beta/changelog.html" target="_blank">Wijzigingslogboek BETA-release.</a>
 
 PLUGIN_COMMUNITY_FIRMWARE_RISK_NOTICE
+	DE	Diese Firmware wird in der Hoffnung verteilt, dass sie n&uuml;tzlich ist,<br />jedoch OHNE JEGLICHE GARANTIE, auch ohne die implizite Garantie der <br />MARKTG&Auml;NGIGKEIT oder EIGNUNG F&uuml;R EINEN BESTIMMTEN ZWECK.<br /> Die Verwendung erfolgt auf eigene Gefahr.
 	EN	This firmware is distributed in the hope that it will be useful, but<br />WITHOUT ANY WARRANTY; without even the implied warranty of <br />MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.<br /><br />Use at your own risk&#33;<br />
+	FR	Ce micrologiciel est distribué dans l'espoir qu'il sera utile, mais <br />SANS AUCUNE GARANTIE, y compris sans garantie implicite de <br />QUALITÉ MARCHANDE ou D'ADÉQUATION À UN USAGE PARTICULIER. <br /><br />Utilisez-le à vos propres risques.
 	NL	Deze firmware wordt verspreid in de hoop dat deze nuttig zal zijn, maar<br />ZONDER ENIGE GARANTIE; zelfs zonder de impliciete garantie van<br />VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.<br /><br />Gebruik op eigen risico&#33;<br />
