@@ -4,13 +4,13 @@
     <title lang="EN">Community Jive Firmware</title>
   </details>
   <plugins>
-    <plugin maxTarget="*" minTarget="8.4" name="CommunityFirmware" version="0.2.0">
+    <plugin maxTarget="*" minTarget="8.4" name="CommunityFirmware" version="0.2.1">
       <title lang="EN">Community Firmware</title>
       <desc lang="EN">Community Firmware for SqueezeBox Touch/Radio/Controller</desc>
       <creator>Michael Herger, Ralph Irving</creator>
       <email>ralph_irving@hotmail.com</email>
-      <url>https://github.com/ralph-irving/plugin-CommunityFirmware/releases/download/0.2.0/plugin-CommunityFirmware-0.2.0.zip</url>
-      <sha>507058588bc2df7f1085468527609374b4f20ce5</sha>
+      <url>https://github.com/ralph-irving/plugin-CommunityFirmware/releases/download/0.2.1/plugin-CommunityFirmware-0.2.1.zip</url>
+      <sha>205cfa7663d506ee5156e444c9a3eaeec97a195e</sha>
     </plugin>
   </plugins>
 </extensions>
